@@ -1,0 +1,44 @@
+# ======================
+# Global
+# ======================
+node_modules/
+.env
+.env.local
+.env.development
+.env.production
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ======================
+# Frontend (React + Vite)
+# ======================
+ecommerce-frontend/node_modules/
+ecommerce-frontend/.env
+ecommerce-frontend/dist/
+ecommerce-frontend/.DS_Store
+ecommerce-frontend/.vite
+ecommerce-frontend/.next
+ecommerce-frontend/out
+ecommerce-frontend/coverage/
+
+# Editor & OS
+ecommerce-frontend/.vscode/
+ecommerce-frontend/.idea/
+ecommerce-frontend/.cache/
+
+# ======================
+# Backend (Node.js / Express)
+# ======================
+ecommerce-backend/node_modules/
+ecommerce-backend/.env
+ecommerce-backend/.DS_Store
+ecommerce-backend/.vscode/
+ecommerce-backend/.idea/
+ecommerce-backend/logs/
+ecommerce-backend/coverage/
+ecommerce-backend/tmp/
+ecommerce-backend/dist/
