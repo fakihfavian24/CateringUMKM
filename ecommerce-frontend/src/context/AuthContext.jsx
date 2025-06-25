@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from 'react';
-import API from '../api/axios';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext();
@@ -10,18 +9,21 @@ export const AuthProvider = ({ children }) => {
   // Cek apakah ada token di localStorage saat pertama kali aplikasi dijalankan
   useEffect(() => {
     const token = localStorage.getItem('token');
-    if (token) {
-      setUser({ token }); // Simpan token ke state user
+    const role = localStorage.getItem('role');
+    if (token && role) {
+      setUser({ token, role }); // Simpan token ke state user
     }
   }, []);
 
-  const login = (token) => {
+  const login = (token, role) => {
     localStorage.setItem('token', token);
-    setUser({ token });
+    localStorage.setItem('role', role);
+    setUser({ token, role });
   };
 
   const logout = () => {
     localStorage.removeItem('token');
+    localStorage.removeItem('role');
     setUser(null);
   };
 

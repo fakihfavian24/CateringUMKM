@@ -1,6 +1,6 @@
 import React from 'react';
 // import Navbar from '../components/Navbar';
-import heroImage from '../assets/ecommerce.png';
+import heroImage from '../assets/heroimage.png';
 
 const products = [
   {

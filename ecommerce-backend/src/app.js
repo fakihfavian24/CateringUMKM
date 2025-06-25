@@ -17,7 +17,8 @@ app.use(helmet());
 // app.use(cors());
 
 app.use(cors({
-  origin: 'http://127.0.0.1:5173', // atau 'http://localhost:5173' tergantung dari URL frontend-mu
+  //origin: 'http://127.0.0.1:5173', // atau 'http://localhost:5173' tergantung dari URL frontend-mu
+  origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
   credentials: true
 }));
 
@@ -43,6 +44,7 @@ app.use('/api/cart', require('./routes/api/cart'));
 app.use('/api/orders', require('./routes/api/orders'));
 app.use('/api/payments', require('./routes/api/payments'));
 app.use('/api/wishlist', require('./routes/api/wishlist'));
+app.use('/api/dashboard', require('./routes/api/dashboard'));
 
 // Base route
 app.get('/', (req, res) => {
